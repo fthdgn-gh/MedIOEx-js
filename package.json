@@ -1,6 +1,7 @@
 {
   "name": "medioex-js",
   "version": "0.1.1",
+  "author": "Fatih Doğan @ PeakUp Information Technologies",
   "description": "Node.js module for the Raspberry PI shield MedIOEx.",
   "scripts": {
     "configure": "node-gyp configure",
