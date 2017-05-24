@@ -1,6 +1,6 @@
 {
   "name": "medioex-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js module for the Raspberry PI shield MedIOEx.",
   "scripts": {
     "configure": "node-gyp configure",
@@ -15,9 +15,9 @@
   "dependencies": {
     "bindings": "^1.2.1"
   },
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/fatihdgn/MedIOEx-js.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatihdgn/MedIOEx-js.git"
   },
   "license": "GPL-2.0"
 }
