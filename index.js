@@ -84,12 +84,35 @@ var node = require('./build/Release/medioex-io');
     return (10.0 / 4095.0) * value;
   };
 
-  node.analogGetValueAsDigital = function(pin) {
-    return node.convertAnalogToDigital(node.analogGetValue(pin));
-  };
+  node.digital = Object.freeze({
+    pins: node.pins.digital,
+    setHigh: function(pin) {
+      node.digitalSetHigh(pin);
+    },
+    setLow: function(pin) {
+      node.digitalSetLow(pin);
+    },
+    get: function(pin){
+      return node.digitalGetValue(pin);
+    }
+  });
+
+  node.analog = Object.freeze({
+    pins: node.pins.analog,
+    write: function(pin, value) {
+      node.analogWriteValue(pin, value);
+    },
+    get: function(pin) {
+      return node.analogGetValue(pin);
+    }
+  });
 
   node.analogWriteValueWithDigital = function(pin, value) {
     node.analogWriteValue(pin, node.convertDigitalToAnalog(value));
+  };
+
+  node.analogGetValueAsDigital = function(pin) {
+    return node.convertAnalogToDigital(node.analogGetValue(pin));
   };
 })();
 
